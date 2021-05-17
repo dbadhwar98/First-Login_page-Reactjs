@@ -1,0 +1,61 @@
+.login
+  {    
+    align-items: center;
+    border: 1px solid #ddd;
+    width: 400px;
+    height: 405px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 110px;
+    border-radius: 5px;
+    font-size:small;
+    background-image: url("./login.jpg");
+  }
+  .bg{
+    background-image: url("./login.jpg");
+  }
+
+.user
+ {
+    font-size: medium;
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bolder;
+  }
+
+.pass
+  {
+      text-align: center;
+      margin-top: 39px;
+      font-weight: bolder;
+      font-size: medium;  
+  }
+
+.input
+  {
+    padding: 11px; 
+    border-radius: 12px;
+    background-image: url("./login.jpg");
+    border-width: 2px;
+  } 
+
+.log
+  {
+    text-align: center;
+  }
+
+.btn
+  {
+    margin-top: 40px;
+    margin-left: 47px;
+    border-radius: 19px;
+    width: 280px;
+    height: 10;
+  }
+  
+.in
+  {
+     margin-left: 150px;
+     font-size: x-large;
+     font-weight: bolder;
+  }

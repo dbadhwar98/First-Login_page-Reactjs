@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
-import App from './component/employeetile'
-
+import reportWebVitals from './reportWebVitals'; 
+// import Employee from './part2ass/Employee'
+// import Empform from './compo2/EmployeeForm.js'
+// import Login from './component/login'
+// import App from './component/employeetile'
+import App from './App'
 import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Empform /> */}
+    {/* <Employee/> */}
    <App />
+   {/* <Login /> */}
   </React.StrictMode>,
   document.getElementById('root')
   

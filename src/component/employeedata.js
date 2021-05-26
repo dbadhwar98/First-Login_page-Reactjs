@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-class Data extends Component {
- 
-  render() {
-    const { employeeData } = this.props;
+import React from 'react';
+
+function Data(props){
+    //const { employeeData } = props;
 
     return (
       <div>
        <h1>Employee Data</h1>
         <table border="5">
-          {employeeData.map((data, index) => {
+          {props.employeeData.map((data, index) => {
             return (
               <div>
-                <tr key={data.id}>
+                <tr key={index}>
                   <td>id :</td>
                   <td>{data.id}</td>
                 </tr>
@@ -30,7 +29,6 @@ class Data extends Component {
         </table>
       </div>
     );
-  }}
-
+  }
  
 export default Data ;

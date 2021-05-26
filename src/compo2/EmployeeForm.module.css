@@ -1,0 +1,15 @@
+.form{
+    align-items: center;
+    border: 1px solid #ddd;
+    width: 350px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 110px;
+    border-radius: 5px;
+    font-size:small;
+}
+.txt{
+    align-items: center;
+    box-sizing: border-box;
+}

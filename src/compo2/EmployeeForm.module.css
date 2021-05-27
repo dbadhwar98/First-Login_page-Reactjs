@@ -1,8 +1,8 @@
 .form{
     align-items: center;
     border: 1px solid #ddd;
-    width: 350px;
-    height: 300px;
+    width: 250px;
+    height: 210px;
     margin: 20px auto;
     padding: 20px;
     margin-top: 110px;
@@ -12,4 +12,7 @@
 .txt{
     align-items: center;
     box-sizing: border-box;
+}
+.btn{
+    align-items: center;
 }

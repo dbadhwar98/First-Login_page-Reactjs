@@ -1,36 +1,33 @@
 import NewEmployee from './compo2/NewEmployee'
-import React, { Component } from 'react';
+import React,{Component} from 'react';
+import Employee from './part2ass/Employee';
+// import  EmployeeData from './component/employeedata'
 
  
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { }
     
   }
- GetData=(val)=> {
+ GetData=(val)=> 
+  {
         console.log("value is ",val)
-  }
- 
+  } 
   render() {
     return (
       <div >
+      
+        <Employee/>
         <NewEmployee GetData={this.getData} />
       </div >
     );
   }
 }
  
-export default App;
-
-
-
-// import EmployeeData from './component/employeedata ';
-
-
 // //parent component
 
-// function App(props) {
+// function App() {
 // const employees= [
 //      {
 //        id: 'e1',
@@ -67,9 +64,7 @@ export default App;
 //    return (
 //      <div>
 //        <h2>Employee data</h2>
-//        <EmployeeData employees={employees} />
+//        <EmployeeData Data={employees} />
 //      </div>
 //    );
 // }
-
-// export default App;

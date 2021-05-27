@@ -1,21 +1,28 @@
-import EmployeeFilter from './EmployeeFilter'
-import React, { Component } from 'react';
-
-class Employee extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        age:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
-              }
-const selectedValue=(e)=>{
-console.log(e.target.value)
-this.setState({age:e.target.value})
+import React, { Component } from 'react'
+import Button from 'react-bootstrap/Button';
+export default class Employee extends Component {
+    constructor(props)
+    {
+super(props);
+this.state={
+    age:" "
 }
+}
+    
+selectedValue()
+    {
+    console.log(this.state.age)
+    // this.props.agesubmit(this.state)
+    
     }
-    render() { 
+    
+    render()
+    { 
+       
         return ( <div>
+            
             <label>Age</label>
-            <select  onClick={this.selectedValue}>
+            <select onChange={(f)=>{this.setState({age:f.target.value})}} >
                 <option value="01">1</option>
                 <option value="02">2</option>
                 <option value="03">3</option>
@@ -48,9 +55,10 @@ this.setState({age:e.target.value})
                 <option value="30">20</option>
                 
             </select>
+            <br/>
+            <br/>
+            <Button className=" align:center"  onClick={this.selectedValue()}> Submit Age</Button>
         </div>
          );
     }
 }
- 
-export default Employee;

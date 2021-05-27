@@ -1,34 +1,19 @@
 import React from 'react';
+import Emptile from './employeetile'
 
-function Data(props){
-    //const { employeeData } = props;
-
+function Emp(props){
+  
+console.log(props.Data[0])
     return (
       <div>
-       <h1>Employee Data</h1>
-        <table border="5">
-          {props.employeeData.map((data, index) => {
-            return (
-              <div>
-                <tr key={index}>
-                  <td>id :</td>
-                  <td>{data.id}</td>
-                </tr>
-                <tr key={index}>
-                  <td>Name :</td>
-                  <td>{data.name}</td>
-                </tr>
-                <tr key={index}>
-                  <td>Age :</td>
-                  <td>{data.age}</td>
-                </tr>
-              </div>
-            );
-          })
-            }
-        </table>
+       <Emptile details={props.Data[0]}/>
+       <Emptile details={props.Data[1]}/>
+       <Emptile details={props.Data[2]}/>
+       <Emptile details={props.Data[3]}/>
+       <Emptile details={props.Data[4]}/>
+       <Emptile details={props.Data[5]}/>
       </div>
     );
   }
  
-export default Data ;
+export default Emp ;

@@ -5,12 +5,12 @@ import reportWebVitals from './reportWebVitals';
 // import Employee from './part2ass/Employee'
 // import Empform from './compo2/EmployeeForm.js'
 // import Login from './component/login'
-// import App from './component/employeetile'
 import App from './App'
+// import App from './App'
 import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Empform /> */}
+    {/* <Empform /> */}``
     {/* <Employee/> */}
    <App />
    {/* <Login /> */}

@@ -12,7 +12,7 @@ this.state={
 selectedValue()
     {
     console.log(this.state.age)
-    // this.props.agesubmit(this.state)
+    //this.props.agesubmit(this.state)
     
     }
     

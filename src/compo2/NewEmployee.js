@@ -4,7 +4,7 @@ const NewEmployee=(props)=>{
 
 
     return(
-        <EmployeeForm getData={props.getData}/>
+        <EmployeeForm GetData={props.getData}/>
            )
 }
 export default NewEmployee;

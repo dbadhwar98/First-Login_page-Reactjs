@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import style from './employee.module.css'
 import Button from 'react-bootstrap/Button';
 export default class Employee extends Component {
     constructor(props)
@@ -12,17 +13,17 @@ this.state={
 selectedValue()
     {
     console.log(this.state.age)
-    //this.props.agesubmit(this.state)
+    //this.props.handleChange(this.state)
     
     }
     
     render()
     { 
        
-        return ( <div>
+        return ( <div className={style.form}>
             
-            <label>Age</label>
-            <select onChange={(f)=>{this.setState({age:f.target.value})}} >
+            <label className={style.txt}><h4>Age</h4></label>
+            <select className={style.slct} onChange={(f)=>{this.setState({age:f.target.value})}} >
                 <option value="01">1</option>
                 <option value="02">2</option>
                 <option value="03">3</option>
@@ -57,7 +58,9 @@ selectedValue()
             </select>
             <br/>
             <br/>
-            <Button className=" align:center"  onClick={this.selectedValue()}> Submit Age</Button>
+            <Button  className={style.btn}variant="contained" type="submit" color="primary" onClick={this.selectedValue()}> Submit
+</Button>
+
         </div>
          );
     }

@@ -11,7 +11,7 @@ export default class App extends Component {
     
   }
  GetData=(val)=> 
-  {
+ {
         console.log("value is ",val)
   } 
   render() {

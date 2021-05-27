@@ -17,15 +17,13 @@ class Empform extends Component {
      }
     
      handleSubmit=(e)=>{
-
-        
         console.log(this.state.age,"this is age")
         console.log(this.state.name,"this is name")
         console.log(this.state.id,"this is id")
          e.preventDefault()
          console.log(this.state)
          console.log(this.props)
-         this.props.getData(this.state)
+         this.props.GetData(this.state)
      }
     render() { 
         return ( 

@@ -10,7 +10,14 @@ import App from './App'
 import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Empform /> */}``
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">Login</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+    
+    {/* <Empform /> */}
     {/* <Employee/> */}
    <App />
    {/* <Login /> */}

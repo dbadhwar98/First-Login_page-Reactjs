@@ -3,13 +3,12 @@ import style from './Employe.module.css'
 import Button from 'react-bootstrap/Button';
 
 
-export default function Employee() {
+export default function Employee(props) {
 const[age,setAge]=useState(" ");
 
    function  submit(e){
-    console.log(age)
     e.preventDefault()
-    setAge( ' ')
+    props.value(age)
     }
     return (
         <div className={style.form}>            

@@ -1,71 +1,58 @@
 import NewEmployee from './component2/NewEmployee'
-import React from 'react'
-import EmployeeFilter from './component2/EmployeeAgeFilters/EmployeeFiters';
+import React, { useState } from 'react'
+import Employee from './component2/EmployeeAgeFilters/Employee';
+import  EmployeeData from './component/employeedata'
 
-export default function App() {
+    const All_Employees= [
+         {
+           id: '1',
+           name: 'Akhil',
+           age: 20
+         },
+         {
+           id: '2',
+           name: 'Aman',
+           age: 21
+         },
+    {
+           id: '3',
+           name: 'Vikas',
+           age: 22
+         },
+    {
+           id: '4',
+           name: 'Harminder',
+           age: 23
+         },
+    {
+           id: '5',
+           name: 'Deeksha',
+           age: 24
+         },
+    {
+           id: '6',
+           name: 'Puneet',
+           age: 25
+         },
+       ];
+    
 
+  export default function App() {
+const [Employees,setEmployees]=useState(All_Employees);
 
+const addEmployeeHandler=(newEmployee)=>{
   
-  const saveDetails = (val) => {
-    console.log(val)
-  }
- 
-  return (
-    <div>
-      <NewEmployee saveDetails={saveDetails} />
-      <br></br>
-      <EmployeeFilter />
-
-    </div>
-  )
+  setEmployees((prevEmployees)=>{
+    return [...prevEmployees,newEmployee];
+  });
 }
 
-
-
-
-
-
-
-//  import  EmployeeData from './component/employeedata'
-
-//  function App(props) {
-// const employees= [
-//      {
-//        id: 'e1',
-//        name: 'Akhil',
-//        age: 20
-//      },
-//      {
-//        id: 'e2',
-//        name: 'Aman',
-//        age: 21
-//      },
-// {
-//        id: 'e3',
-//        name: 'Vikas',
-//        age: 22
-//      },
-// {
-//        id: 'e4',
-//        name: 'Harminder',
-//        age: 23
-//      },
-// {
-//        id: 'e5',
-//        name: 'Deeksha',
-//        age: 24
-//      },
-// {
-//        id: 'e6',
-//        name: 'Puneet',
-//        age: 25
-//      },
-//    ];
-
-//    return (
-//      <div>
-//        <h2>Employee data</h2>
-//        <EmployeeData Data={employees} />
-//      </div>
-//    );
-// }
+   return (
+     <div>
+        <NewEmployee onAddEmployee={addEmployeeHandler} />
+     <br></br>
+      <Employee/>
+       <EmployeeData employees={Employees} />
+     </div>
+   );
+   }

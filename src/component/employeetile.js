@@ -5,13 +5,13 @@ export default function employeetile(props) {
     <div>
 
       <h5>
-        Id: {props.details.id}
+        Id: {props.id}
       </h5>
       <h5>
-         Name:{props.details.name}
+         Name:{props.name}
         </h5>
         <h5>
-         Age: {props.details.age}
+         Age:{props.age}
         </h5>
         ____________________________________________
     </div>

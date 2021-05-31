@@ -2,25 +2,23 @@ import s from './EmployeeForm.module.css'
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/textfield'
 import Button from 'react-bootstrap/Button';
- const Employeeform=(props)=> {
+ const Employeeform=(props)=>{
   
     const[name,setName]=useState(' ');
     const[age,setAge]=useState(' ');
     const id=(Math.floor(Math.random()*10)).toString()
     
-  const handlenamechange = (e) => {
+  const handleNameChange = (e) => {
     setName(e.target.value)
   }
-  const handleagechange = (e) => {
+  const handleAgeChange = (e) => {
     setAge(e.target.value)
   }
 
   function submit(e) {
     e.preventDefault();
-    console.log(age,name,id)
-    props.saveDetails({
-     age,name,id
-    });
+    console.log(id,name,age)
+    props.onAddEmployee({id,name,age});
   }
 
   return (
@@ -31,19 +29,19 @@ import Button from 'react-bootstrap/Button';
           type="text"
          id="outlined-helperText"
          label="Name"
-         onChange={handlenamechange}
+         onChange={handleNameChange}
          value={name}
          variant="outlined"
          />  
          <br/>
          <br/>
          <br/>
-         <TextField className={s.txt}
+         <TextField 
          id="outlined-helperText"
          type="text"
          label="Age"
          value={age}
-         onChange={handleagechange}
+         onChange={handleAgeChange}
          variant="outlined"
          /> 
          <br/>

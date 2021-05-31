@@ -1,19 +1,31 @@
 import React from 'react';
 import Emptile from './employeetile'
 
-function Emp(props){
-  
-console.log(props.Data[0])
+function EmployeeData(props)
+{
+  console.log(props.employees[1])
     return (
       <div>
-       <Emptile details={props.Data[0]}/>
-       <Emptile details={props.Data[1]}/>
-       <Emptile details={props.Data[2]}/>
-       <Emptile details={props.Data[3]}/>
-       <Emptile details={props.Data[4]}/>
-       <Emptile details={props.Data[5]}/>
+        {props.employees.map(data=>
+        {
+          return  <Emptile key={data.id} 
+          id={data.id}
+          name={data.name}
+          age={data.age} />
+        
+        }
+        )}
+
+
+
+       {/* <Emptile Data={props.employees[0]}/>
+       <Emptile Data={props.employees[1]}/>
+       <Emptile Data={props.employees[2]}/>
+       <Emptile Data={props.employees[3]}/>
+       <Emptile Data={props.employees[4]}/>
+       <Emptile Data={props.employees[5]}/> */}
       </div>
     );
   }
  
-export default Emp ;
+export default EmployeeData ;

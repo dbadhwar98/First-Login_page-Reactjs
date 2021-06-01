@@ -1,67 +1,63 @@
+import React, { useState } from "react";
+import EmployeeData from './component/employeedata'
 import NewEmployee from './component2/NewEmployee'
-import React, { useState } from 'react'
-import EmployeeFilter from './component2/EmployeeAgeFilters/EmployeeFiters';
-import  EmployeeData from './component/employeedata'
+import Employee from './component2/EmployeeAgeFilters/Employee'
 
-    const All_Employees= [
-         {
-           id: '1',
-           name: 'Akhil',
-           age: 20
-         },
-         {
-           id: '2',
-           name: 'Aman',
-           age: 21
-         },
-    {
-           id: '3',
-           name: 'Vikas',
-           age: 22
-         },
-    {
-           id: '4',
-           name: 'Harminder',
-           age: 23
-         },
-    {
-           id: '5',
-           name: 'Deeksha',
-           age: 24
-         },
-    {
-           id: '6',
-           name: 'Puneet',
-           age: 25
-         },
-       ];
-    
+const employees = [
+  {
+    id: "e1",
+    name: "Akhil",
+    age: 20,
+  },
+  {
+    id: "e2",
+    name: "Aman",
+    age: "21",
+  },
+  {
+    id: "e3",
+    name: "Vikas",
+    age: "22",
+  },
+  {
+    id: "e4",
+    name: "Harminder",
+    age: "23",
+  },
+  {
+    id: "e5",
+    name: "Deeksha",
+    age: "24",
+  },
+  {
+    id: "e6",
+    name: "Puneet",
+    age: "25",
+  },
+];
 
-  export default function App() {
-const [Employees,setEmployees]=useState(All_Employees);
+const App = () => {
+  const [newEmployees, setNewEmployees] = useState(employees);
 
-const addEmployeeHandler=(newEmployee)=>{
-  
-  setEmployees((prevEmployees)=>{
-    return [...prevEmployees,newEmployee];
-  });
-}
-
-const [age, setAge] = useState("All");
-const saveAge = (a) => {
-  setAge((age) => {
-    return a;
-  });
+  const onAddEmployee = (newEmployees) => {
+    setNewEmployees((prevNewEmployees) => {
+      return [...prevNewEmployees, newEmployees];
+    });
+  };
+  const [age, setAge] = useState("All");
+  const saveAge = (a) => {
+    setAge((age) => {
+      return a;
+    });
+  };
+  return (
+    <div>
+      <h2>Employee data</h2>
+      <EmployeeData employees={newEmployees} age={age} />
+      <NewEmployee onAddEmployee={onAddEmployee} />
+      <Employee saveAge={saveAge} />
+    </div>
+  );
 };
 
-   return (
-     <div>
-        <NewEmployee onAddEmployee={addEmployeeHandler}  />
-     <br></br>
-     <EmployeeFilter saveAge={saveAge}/>
-    
-       <EmployeeData employees={Employees}  age={age}/>
-      
-     </div>
-   );
-   }
+export default App;

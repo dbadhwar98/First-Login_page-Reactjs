@@ -1,8 +1,8 @@
 import React from 'react'
-import EmployeeFilter from './EmployeeFilter';
+import EmployeeFilter from './EmployeeFiters';
 
 
-const Employees = (props) => {
+const Employee = (props) => {
     
     return (
         <div>
@@ -12,4 +12,4 @@ const Employees = (props) => {
 }
 
  
-export default Employees;
+export default Employee;

@@ -1,6 +1,6 @@
 import NewEmployee from './component2/NewEmployee'
 import React, { useState } from 'react'
-import Employee from './component2/EmployeeAgeFilters/Employee';
+import EmployeeFilter from './component2/EmployeeAgeFilters/EmployeeFiters';
 import  EmployeeData from './component/employeedata'
 
     const All_Employees= [
@@ -47,12 +47,21 @@ const addEmployeeHandler=(newEmployee)=>{
   });
 }
 
+const [age, setAge] = useState("All");
+const saveAge = (a) => {
+  setAge((age) => {
+    return a;
+  });
+};
+
    return (
      <div>
-        <NewEmployee onAddEmployee={addEmployeeHandler} />
+        <NewEmployee onAddEmployee={addEmployeeHandler}  />
      <br></br>
-      <Employee/>
-       <EmployeeData employees={Employees} />
+     <EmployeeFilter saveAge={saveAge}/>
+    
+       <EmployeeData employees={Employees}  age={age}/>
+      
      </div>
    );
    }

@@ -12,7 +12,24 @@
     font-size:small;
     
 }
+.selectbox
+   {
+        align-items: center;
+        border: 3px solid rgb(0, 0, 0);
+        width: 250px;
+        height: 100px;
+        margin-left: 400px;
+        padding: 20px;
+        margin-top: 90px;
+        margin-bottom: 50px;
+        border-radius: 5px;
+        border-block-color: black;
+        font-size:small;
+        
+    
+}
 .txt{
+
     align-items: center;
     box-sizing: border-box;
     border-block-color: black;

@@ -1,19 +1,26 @@
-import React from 'react'
+import React from "react";
 
-export default function employeetile(props) {
-  return (
-    <div>
+const EmployeeTile = (props) => {
+  const details = props.employees.filter((item) => {
+    if (props.age === item.age) {
+      return [item];
+    } else if (props.age === "All") return [props.employees];
+  });
+  let employee = <p>No Employee for selected Age</p>;
+  if (details.length > 0) {
+    employee = details.map((item) => (
+      <div key={item.id}>
+        <div>Id-{item.id}</div>
+        <span>Name-{item.name}</span>
+        <br />
+        <span>Age-{item.age}</span>
+        <br />
+        <br />
+      </div>
+    ));
+  }
 
-      <h5>
-        Id: {props.id}
-      </h5>
-      <h5>
-         Name:{props.name}
-        </h5>
-        <h5>
-         Age:{props.age}
-        </h5>
-        ____________________________________________
-    </div>
-  )
-}
+  return <div>{employee}</div>;
+};
+
+export default EmployeeTile;

@@ -49,7 +49,7 @@ const App = () => {
     setAge((age) => {
       return a;
     });
-  };
+  }
   return (
     <div>
       <h2>Employee data</h2>
